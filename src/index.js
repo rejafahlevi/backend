@@ -2,9 +2,9 @@ const Hapi = require("@hapi/hapi");
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
+  host: "metcha.cyun0xqnspm3.ap-southeast-1.rds.amazonaws.com",
+  user: "reja",
+  password: "12345678",
   database: "metcha",
 });
 
@@ -19,7 +19,7 @@ connection.connect((err) => {
 const init = async () => {
   const server = Hapi.server({
     port: 5000,
-    host: "localhost",
+    host: "0.0.0.0",
   });
 
   // Tambahkan rute atau pengaturan server lainnya disini
